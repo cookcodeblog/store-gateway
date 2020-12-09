@@ -1,0 +1,15 @@
+zuul:
+  routes:
+    customer:
+      url: http://localhost:8280
+    preference:
+      url: http://localhost:8180
+    recommendation:
+      url: http://localhost:8380
+
+ribbon:
+  eureka:
+    enabled: false
+
+server:
+  port: 8080
