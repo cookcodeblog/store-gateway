@@ -1,15 +1,3 @@
-#zuul:
-#  routes:
-#    customer:
-#      url: http://localhost:8280
-#    preference:
-#      url: http://localhost:8180
-#    recommendation:
-#      url: http://localhost:8380
-
-#ribbon:
-#  eureka:
-#    enabled: false
 
 zuul:
   prefix: /api
@@ -36,13 +24,13 @@ ribbon:
 eureka:
   client:
     serviceURL:
-      defaultZone: http://127.0.0.1:8761/eureka/
+      defaultZone: ${EUREKA_SERVER_URL:http://localhost:8761/eureka/}
     fetch-registry: true
 
 
 
 server:
-  port: 8080
+  port: ${ZUUL_PORT:8080}
 
 logging:
   level:
