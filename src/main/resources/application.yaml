@@ -18,6 +18,20 @@ zuul:
     customer:
       path: '/customer/**'
       service-id: customer
+  host:
+    connect-timeout-millis: 10000
+    socket-timeout-millis: 60000
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+
+ribbon:
+  ReadTimeout: 5000
 
 eureka:
   client:
@@ -33,4 +47,5 @@ server:
 logging:
   level:
     com.example.store: DEBUG
+
 
