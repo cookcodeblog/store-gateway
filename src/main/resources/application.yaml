@@ -24,7 +24,7 @@ ribbon:
 eureka:
   client:
     serviceURL:
-      defaultZone: http://service-registry/eureka/
+      defaultZone: http://service-registry:8080/eureka/
     fetch-registry: true
 
 
