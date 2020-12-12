@@ -27,6 +27,8 @@ eureka:
     serviceURL:
       defaultZone: http://service-registry:8080/eureka/
     fetch-registry: true
+  instance:
+    prefer-ip-address: true
 
 
 
