@@ -6,6 +6,7 @@ zuul:
     customer:
       path: '/customer/**'
       service-id: customer
+      url: http://customer:8080
   host:
     connect-timeout-millis: 10000
     socket-timeout-millis: 60000
